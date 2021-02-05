@@ -5,7 +5,8 @@
   "main": "main.js",
   "scripts": {
       "start":" ./node_modules/.bin/http-server .",
-    "test": "echo \"Error: no test specified\" && exit 1"
+      "build":"rm -rf ./dist && mkdir ./dist && cp -r ./res/* ./dist/ && cp -r ./src/* ./dist/ && cp ./cocos2d-js-min.js ./dist/ && cp *.html ./dist/ && cp *.js ./dist/ && cp *.css ./dist/",
+      "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
