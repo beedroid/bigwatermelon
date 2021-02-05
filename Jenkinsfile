@@ -3,7 +3,14 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                sh 'npm --version'
+                sh 'uname -a'
+                sh '''
+                node --version
+                npm --version
+                pwd && ls -al
+                cd /home
+                pwd && ls -al
+                '''
             }
         }
     }
