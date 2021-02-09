@@ -1,5 +1,10 @@
 pipeline {
-    agent { docker 'node:14.15.4' }
+    agent { 
+        docker {
+            iamge: 'node:14.15.4'
+            args '-p 3000:3000'
+        }
+    }
     stages {
         stage('build') {
             steps {
